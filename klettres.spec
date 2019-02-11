@@ -5,18 +5,18 @@
 # Source0 file verified with key 0xDBD2CE893E2D1C87 (cfeck@kde.org)
 #
 Name     : klettres
-Version  : 18.08.0
-Release  : 2
-URL      : https://download.kde.org/stable/applications/18.08.0/src/klettres-18.08.0.tar.xz
-Source0  : https://download.kde.org/stable/applications/18.08.0/src/klettres-18.08.0.tar.xz
-Source99 : https://download.kde.org/stable/applications/18.08.0/src/klettres-18.08.0.tar.xz.sig
+Version  : 18.12.2
+Release  : 3
+URL      : https://download.kde.org/stable/applications/18.12.2/src/klettres-18.12.2.tar.xz
+Source0  : https://download.kde.org/stable/applications/18.12.2/src/klettres-18.12.2.tar.xz
+Source99 : https://download.kde.org/stable/applications/18.12.2/src/klettres-18.12.2.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-2.0 LGPL-2.0
-Requires: klettres-bin
-Requires: klettres-data
-Requires: klettres-license
-Requires: klettres-locales
+Requires: klettres-bin = %{version}-%{release}
+Requires: klettres-data = %{version}-%{release}
+Requires: klettres-license = %{version}-%{release}
+Requires: klettres-locales = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : phonon-dev
@@ -29,8 +29,8 @@ KLettres svn data from l10n-kde4 in KDE svn, using anonsvn.
 %package bin
 Summary: bin components for the klettres package.
 Group: Binaries
-Requires: klettres-data
-Requires: klettres-license
+Requires: klettres-data = %{version}-%{release}
+Requires: klettres-license = %{version}-%{release}
 
 %description bin
 bin components for the klettres package.
@@ -69,27 +69,27 @@ locales components for the klettres package.
 
 
 %prep
-%setup -q -n klettres-18.08.0
+%setup -q -n klettres-18.12.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1535430684
-mkdir clr-build
+export SOURCE_DATE_EPOCH=1549869419
+mkdir -p clr-build
 pushd clr-build
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1535430684
+export SOURCE_DATE_EPOCH=1549869419
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/klettres
-cp COPYING %{buildroot}/usr/share/doc/klettres/COPYING
-cp COPYING.DOC %{buildroot}/usr/share/doc/klettres/COPYING.DOC
-cp COPYING.LIB %{buildroot}/usr/share/doc/klettres/COPYING.LIB
+mkdir -p %{buildroot}/usr/share/package-licenses/klettres
+cp COPYING %{buildroot}/usr/share/package-licenses/klettres/COPYING
+cp COPYING.DOC %{buildroot}/usr/share/package-licenses/klettres/COPYING.DOC
+cp COPYING.LIB %{buildroot}/usr/share/package-licenses/klettres/COPYING.LIB
 pushd clr-build
 %make_install
 popd
@@ -1438,20 +1438,13 @@ popd
 /usr/share/klettres/uk/syllab/zyk.ogg
 /usr/share/kxmlgui5/klettres/klettresui.rc
 /usr/share/metainfo/org.kde.klettres.appdata.xml
+/usr/share/xdg/klettres.categories
 /usr/share/xdg/klettres.knsrc
 
 %files doc
 %defattr(0644,root,root,0755)
 /usr/share/doc/HTML/ca/klettres/index.cache.bz2
 /usr/share/doc/HTML/ca/klettres/index.docbook
-/usr/share/doc/HTML/ca/klettres/klettres-newstuff.png
-/usr/share/doc/HTML/ca/klettres/klettres-newstuff2.png
-/usr/share/doc/HTML/ca/klettres/klettres1.png
-/usr/share/doc/HTML/ca/klettres/klettres2.png
-/usr/share/doc/HTML/ca/klettres/klettres3.png
-/usr/share/doc/HTML/ca/klettres/klettres4.png
-/usr/share/doc/HTML/ca/klettres/klettres5.png
-/usr/share/doc/HTML/ca/klettres/klettres6.png
 /usr/share/doc/HTML/de/klettres/index.cache.bz2
 /usr/share/doc/HTML/de/klettres/index.docbook
 /usr/share/doc/HTML/de/klettres/klettres-newstuff.png
@@ -1521,10 +1514,10 @@ popd
 /usr/share/doc/HTML/uk/klettres/klettres6.png
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/klettres/COPYING
-/usr/share/doc/klettres/COPYING.DOC
-/usr/share/doc/klettres/COPYING.LIB
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/klettres/COPYING
+/usr/share/package-licenses/klettres/COPYING.DOC
+/usr/share/package-licenses/klettres/COPYING.LIB
 
 %files locales -f klettres.lang
 %defattr(-,root,root,-)
