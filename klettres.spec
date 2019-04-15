@@ -6,13 +6,13 @@
 #
 Name     : klettres
 Version  : 18.12.3
-Release  : 5
+Release  : 6
 URL      : https://download.kde.org/stable/applications/18.12.3/src/klettres-18.12.3.tar.xz
 Source0  : https://download.kde.org/stable/applications/18.12.3/src/klettres-18.12.3.tar.xz
 Source99 : https://download.kde.org/stable/applications/18.12.3/src/klettres-18.12.3.tar.xz.sig
-Summary  : No detailed summary available
+Summary  : Learn The Alphabet
 Group    : Development/Tools
-License  : GFDL-1.2 GPL-2.0 LGPL-2.0
+License  : GFDL-1.2 GPL-2.0
 Requires: klettres-bin = %{version}-%{release}
 Requires: klettres-data = %{version}-%{release}
 Requires: klettres-license = %{version}-%{release}
@@ -76,16 +76,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552000952
+export SOURCE_DATE_EPOCH=1555336416
 mkdir -p clr-build
 pushd clr-build
-export LDFLAGS="${LDFLAGS} -fno-lto"
 %cmake ..
-make  %{?_smp_mflags} VERBOSE=1
+make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1552000952
+export SOURCE_DATE_EPOCH=1555336416
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/klettres
 cp COPYING %{buildroot}/usr/share/package-licenses/klettres/COPYING
