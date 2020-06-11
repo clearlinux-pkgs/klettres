@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xDBD2CE893E2D1C87 (cfeck@kde.org)
 #
 Name     : klettres
-Version  : 20.04.1
-Release  : 21
-URL      : https://download.kde.org/stable/release-service/20.04.1/src/klettres-20.04.1.tar.xz
-Source0  : https://download.kde.org/stable/release-service/20.04.1/src/klettres-20.04.1.tar.xz
-Source1  : https://download.kde.org/stable/release-service/20.04.1/src/klettres-20.04.1.tar.xz.sig
+Version  : 20.04.2
+Release  : 22
+URL      : https://download.kde.org/stable/release-service/20.04.2/src/klettres-20.04.2.tar.xz
+Source0  : https://download.kde.org/stable/release-service/20.04.2/src/klettres-20.04.2.tar.xz
+Source1  : https://download.kde.org/stable/release-service/20.04.2/src/klettres-20.04.2.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-2.0
@@ -69,15 +69,15 @@ locales components for the klettres package.
 
 
 %prep
-%setup -q -n klettres-20.04.1
-cd %{_builddir}/klettres-20.04.1
+%setup -q -n klettres-20.04.2
+cd %{_builddir}/klettres-20.04.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589844483
+export SOURCE_DATE_EPOCH=1591899369
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -93,12 +93,12 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1589844483
+export SOURCE_DATE_EPOCH=1591899369
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/klettres
-cp %{_builddir}/klettres-20.04.1/COPYING %{buildroot}/usr/share/package-licenses/klettres/d357e60aa8efd63b4475c3363700ba54f9a71343
-cp %{_builddir}/klettres-20.04.1/COPYING.DOC %{buildroot}/usr/share/package-licenses/klettres/1bd373e4851a93027ba70064bd7dbdc6827147e1
-cp %{_builddir}/klettres-20.04.1/COPYING.LIB %{buildroot}/usr/share/package-licenses/klettres/c08668a6ace9b36ba46940609040748161b03a37
+cp %{_builddir}/klettres-20.04.2/COPYING %{buildroot}/usr/share/package-licenses/klettres/d357e60aa8efd63b4475c3363700ba54f9a71343
+cp %{_builddir}/klettres-20.04.2/COPYING.DOC %{buildroot}/usr/share/package-licenses/klettres/1bd373e4851a93027ba70064bd7dbdc6827147e1
+cp %{_builddir}/klettres-20.04.2/COPYING.LIB %{buildroot}/usr/share/package-licenses/klettres/c08668a6ace9b36ba46940609040748161b03a37
 pushd clr-build
 %make_install
 popd
@@ -780,6 +780,115 @@ popd
 /usr/share/klettres/icons/hicolor/64x64/actions/klettres_desert.png
 /usr/share/klettres/icons/hicolor/64x64/actions/klettres_grownup.png
 /usr/share/klettres/icons/hicolor/64x64/actions/klettres_kids.png
+/usr/share/klettres/id/alpha/a.wav
+/usr/share/klettres/id/alpha/b.wav
+/usr/share/klettres/id/alpha/c.wav
+/usr/share/klettres/id/alpha/d.wav
+/usr/share/klettres/id/alpha/e.wav
+/usr/share/klettres/id/alpha/f.wav
+/usr/share/klettres/id/alpha/g.wav
+/usr/share/klettres/id/alpha/h.wav
+/usr/share/klettres/id/alpha/i.wav
+/usr/share/klettres/id/alpha/j.wav
+/usr/share/klettres/id/alpha/k.wav
+/usr/share/klettres/id/alpha/l.wav
+/usr/share/klettres/id/alpha/m.wav
+/usr/share/klettres/id/alpha/n.wav
+/usr/share/klettres/id/alpha/o.wav
+/usr/share/klettres/id/alpha/p.wav
+/usr/share/klettres/id/alpha/q.wav
+/usr/share/klettres/id/alpha/r.wav
+/usr/share/klettres/id/alpha/s.wav
+/usr/share/klettres/id/alpha/t.wav
+/usr/share/klettres/id/alpha/u.wav
+/usr/share/klettres/id/alpha/v.wav
+/usr/share/klettres/id/alpha/w.wav
+/usr/share/klettres/id/alpha/x.wav
+/usr/share/klettres/id/alpha/y.wav
+/usr/share/klettres/id/alpha/z.wav
+/usr/share/klettres/id/sounds.xml
+/usr/share/klettres/id/syllab/ba.wav
+/usr/share/klettres/id/syllab/be.wav
+/usr/share/klettres/id/syllab/bi.wav
+/usr/share/klettres/id/syllab/bo.wav
+/usr/share/klettres/id/syllab/bu.wav
+/usr/share/klettres/id/syllab/ca.wav
+/usr/share/klettres/id/syllab/ce.wav
+/usr/share/klettres/id/syllab/co.wav
+/usr/share/klettres/id/syllab/cu.wav
+/usr/share/klettres/id/syllab/da.wav
+/usr/share/klettres/id/syllab/de.wav
+/usr/share/klettres/id/syllab/di.wav
+/usr/share/klettres/id/syllab/do.wav
+/usr/share/klettres/id/syllab/du.wav
+/usr/share/klettres/id/syllab/fa.wav
+/usr/share/klettres/id/syllab/fe.wav
+/usr/share/klettres/id/syllab/fi.wav
+/usr/share/klettres/id/syllab/fo.wav
+/usr/share/klettres/id/syllab/fu.wav
+/usr/share/klettres/id/syllab/ga.wav
+/usr/share/klettres/id/syllab/go.wav
+/usr/share/klettres/id/syllab/gu.wav
+/usr/share/klettres/id/syllab/ja.wav
+/usr/share/klettres/id/syllab/je.wav
+/usr/share/klettres/id/syllab/ji.wav
+/usr/share/klettres/id/syllab/jo.wav
+/usr/share/klettres/id/syllab/ju.wav
+/usr/share/klettres/id/syllab/la.wav
+/usr/share/klettres/id/syllab/le.wav
+/usr/share/klettres/id/syllab/li.wav
+/usr/share/klettres/id/syllab/lo.wav
+/usr/share/klettres/id/syllab/lu.wav
+/usr/share/klettres/id/syllab/ma.wav
+/usr/share/klettres/id/syllab/me.wav
+/usr/share/klettres/id/syllab/mi.wav
+/usr/share/klettres/id/syllab/mo.wav
+/usr/share/klettres/id/syllab/mu.wav
+/usr/share/klettres/id/syllab/na.wav
+/usr/share/klettres/id/syllab/ne.wav
+/usr/share/klettres/id/syllab/ni.wav
+/usr/share/klettres/id/syllab/no.wav
+/usr/share/klettres/id/syllab/nu.wav
+/usr/share/klettres/id/syllab/pa.wav
+/usr/share/klettres/id/syllab/pe.wav
+/usr/share/klettres/id/syllab/pi.wav
+/usr/share/klettres/id/syllab/po.wav
+/usr/share/klettres/id/syllab/pu.wav
+/usr/share/klettres/id/syllab/ra.wav
+/usr/share/klettres/id/syllab/re.wav
+/usr/share/klettres/id/syllab/ri.wav
+/usr/share/klettres/id/syllab/ro.wav
+/usr/share/klettres/id/syllab/ru.wav
+/usr/share/klettres/id/syllab/sa.wav
+/usr/share/klettres/id/syllab/se.wav
+/usr/share/klettres/id/syllab/si.wav
+/usr/share/klettres/id/syllab/so.wav
+/usr/share/klettres/id/syllab/su.wav
+/usr/share/klettres/id/syllab/ta.wav
+/usr/share/klettres/id/syllab/te.wav
+/usr/share/klettres/id/syllab/ti.wav
+/usr/share/klettres/id/syllab/to.wav
+/usr/share/klettres/id/syllab/tu.wav
+/usr/share/klettres/id/syllab/va.wav
+/usr/share/klettres/id/syllab/ve.wav
+/usr/share/klettres/id/syllab/vi.wav
+/usr/share/klettres/id/syllab/vo.wav
+/usr/share/klettres/id/syllab/vu.wav
+/usr/share/klettres/id/syllab/wa.wav
+/usr/share/klettres/id/syllab/we.wav
+/usr/share/klettres/id/syllab/wi.wav
+/usr/share/klettres/id/syllab/wo.wav
+/usr/share/klettres/id/syllab/wu.wav
+/usr/share/klettres/id/syllab/ya.wav
+/usr/share/klettres/id/syllab/ye.wav
+/usr/share/klettres/id/syllab/yi.wav
+/usr/share/klettres/id/syllab/yo.wav
+/usr/share/klettres/id/syllab/yu.wav
+/usr/share/klettres/id/syllab/za.wav
+/usr/share/klettres/id/syllab/ze.wav
+/usr/share/klettres/id/syllab/zi.wav
+/usr/share/klettres/id/syllab/zo.wav
+/usr/share/klettres/id/syllab/zu.wav
 /usr/share/klettres/it/alpha/a.ogg
 /usr/share/klettres/it/alpha/b.ogg
 /usr/share/klettres/it/alpha/c.ogg
