@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xDBD2CE893E2D1C87 (cfeck@kde.org)
 #
 Name     : klettres
-Version  : 20.04.2
-Release  : 22
-URL      : https://download.kde.org/stable/release-service/20.04.2/src/klettres-20.04.2.tar.xz
-Source0  : https://download.kde.org/stable/release-service/20.04.2/src/klettres-20.04.2.tar.xz
-Source1  : https://download.kde.org/stable/release-service/20.04.2/src/klettres-20.04.2.tar.xz.sig
+Version  : 20.08.0
+Release  : 23
+URL      : https://download.kde.org/stable/release-service/20.08.0/src/klettres-20.08.0.tar.xz
+Source0  : https://download.kde.org/stable/release-service/20.08.0/src/klettres-20.08.0.tar.xz
+Source1  : https://download.kde.org/stable/release-service/20.08.0/src/klettres-20.08.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-2.0
@@ -69,15 +69,15 @@ locales components for the klettres package.
 
 
 %prep
-%setup -q -n klettres-20.04.2
-cd %{_builddir}/klettres-20.04.2
+%setup -q -n klettres-20.08.0
+cd %{_builddir}/klettres-20.08.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1591899369
+export SOURCE_DATE_EPOCH=1597786116
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -89,16 +89,16 @@ export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %cmake ..
-make  %{?_smp_mflags}  VERBOSE=1
+make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1591899369
+export SOURCE_DATE_EPOCH=1597786116
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/klettres
-cp %{_builddir}/klettres-20.04.2/COPYING %{buildroot}/usr/share/package-licenses/klettres/d357e60aa8efd63b4475c3363700ba54f9a71343
-cp %{_builddir}/klettres-20.04.2/COPYING.DOC %{buildroot}/usr/share/package-licenses/klettres/1bd373e4851a93027ba70064bd7dbdc6827147e1
-cp %{_builddir}/klettres-20.04.2/COPYING.LIB %{buildroot}/usr/share/package-licenses/klettres/c08668a6ace9b36ba46940609040748161b03a37
+cp %{_builddir}/klettres-20.08.0/COPYING %{buildroot}/usr/share/package-licenses/klettres/d357e60aa8efd63b4475c3363700ba54f9a71343
+cp %{_builddir}/klettres-20.08.0/COPYING.DOC %{buildroot}/usr/share/package-licenses/klettres/1bd373e4851a93027ba70064bd7dbdc6827147e1
+cp %{_builddir}/klettres-20.08.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/klettres/c08668a6ace9b36ba46940609040748161b03a37
 pushd clr-build
 %make_install
 popd
@@ -2147,7 +2147,6 @@ popd
 /usr/share/doc/HTML/uk/klettres/index.cache.bz2
 /usr/share/doc/HTML/uk/klettres/index.docbook
 /usr/share/doc/HTML/uk/klettres/klettres-newstuff.png
-/usr/share/doc/HTML/uk/klettres/klettres-newstuff1.png
 /usr/share/doc/HTML/uk/klettres/klettres-newstuff2.png
 /usr/share/doc/HTML/uk/klettres/klettres1.png
 /usr/share/doc/HTML/uk/klettres/klettres2.png
