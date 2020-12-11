@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xDBD2CE893E2D1C87 (cfeck@kde.org)
 #
 Name     : klettres
-Version  : 20.08.3
-Release  : 25
-URL      : https://download.kde.org/stable/release-service/20.08.3/src/klettres-20.08.3.tar.xz
-Source0  : https://download.kde.org/stable/release-service/20.08.3/src/klettres-20.08.3.tar.xz
-Source1  : https://download.kde.org/stable/release-service/20.08.3/src/klettres-20.08.3.tar.xz.sig
+Version  : 20.12.0
+Release  : 26
+URL      : https://download.kde.org/stable/release-service/20.12.0/src/klettres-20.12.0.tar.xz
+Source0  : https://download.kde.org/stable/release-service/20.12.0/src/klettres-20.12.0.tar.xz
+Source1  : https://download.kde.org/stable/release-service/20.12.0/src/klettres-20.12.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-2.0
@@ -69,15 +69,15 @@ locales components for the klettres package.
 
 
 %prep
-%setup -q -n klettres-20.08.3
-cd %{_builddir}/klettres-20.08.3
+%setup -q -n klettres-20.12.0
+cd %{_builddir}/klettres-20.12.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1604604707
+export SOURCE_DATE_EPOCH=1607719507
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -93,12 +93,12 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1604604707
+export SOURCE_DATE_EPOCH=1607719507
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/klettres
-cp %{_builddir}/klettres-20.08.3/COPYING %{buildroot}/usr/share/package-licenses/klettres/d357e60aa8efd63b4475c3363700ba54f9a71343
-cp %{_builddir}/klettres-20.08.3/COPYING.DOC %{buildroot}/usr/share/package-licenses/klettres/1bd373e4851a93027ba70064bd7dbdc6827147e1
-cp %{_builddir}/klettres-20.08.3/COPYING.LIB %{buildroot}/usr/share/package-licenses/klettres/c08668a6ace9b36ba46940609040748161b03a37
+cp %{_builddir}/klettres-20.12.0/COPYING %{buildroot}/usr/share/package-licenses/klettres/d357e60aa8efd63b4475c3363700ba54f9a71343
+cp %{_builddir}/klettres-20.12.0/COPYING.DOC %{buildroot}/usr/share/package-licenses/klettres/1bd373e4851a93027ba70064bd7dbdc6827147e1
+cp %{_builddir}/klettres-20.12.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/klettres/c08668a6ace9b36ba46940609040748161b03a37
 pushd clr-build
 %make_install
 popd
@@ -2076,10 +2076,10 @@ popd
 /usr/share/klettres/uk/syllab/zhyt.ogg
 /usr/share/klettres/uk/syllab/zmi.ogg
 /usr/share/klettres/uk/syllab/zyk.ogg
+/usr/share/knsrcfiles/klettres.knsrc
 /usr/share/kxmlgui5/klettres/klettresui.rc
 /usr/share/metainfo/org.kde.klettres.appdata.xml
 /usr/share/qlogging-categories5/klettres.categories
-/usr/share/xdg/klettres.knsrc
 
 %files doc
 %defattr(0644,root,root,0755)
