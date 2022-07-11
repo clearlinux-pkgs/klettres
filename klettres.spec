@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : klettres
-Version  : 22.04.2
-Release  : 41
-URL      : https://download.kde.org/stable/release-service/22.04.2/src/klettres-22.04.2.tar.xz
-Source0  : https://download.kde.org/stable/release-service/22.04.2/src/klettres-22.04.2.tar.xz
-Source1  : https://download.kde.org/stable/release-service/22.04.2/src/klettres-22.04.2.tar.xz.sig
+Version  : 22.04.3
+Release  : 42
+URL      : https://download.kde.org/stable/release-service/22.04.3/src/klettres-22.04.3.tar.xz
+Source0  : https://download.kde.org/stable/release-service/22.04.3/src/klettres-22.04.3.tar.xz
+Source1  : https://download.kde.org/stable/release-service/22.04.3/src/klettres-22.04.3.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-2.0 LGPL-2.0
@@ -69,15 +69,15 @@ locales components for the klettres package.
 
 
 %prep
-%setup -q -n klettres-22.04.2
-cd %{_builddir}/klettres-22.04.2
+%setup -q -n klettres-22.04.3
+cd %{_builddir}/klettres-22.04.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1654835670
+export SOURCE_DATE_EPOCH=1657568789
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -93,12 +93,12 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1654835670
+export SOURCE_DATE_EPOCH=1657568789
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/klettres
-cp %{_builddir}/klettres-22.04.2/COPYING.DOC %{buildroot}/usr/share/package-licenses/klettres/1bd373e4851a93027ba70064bd7dbdc6827147e1
-cp %{_builddir}/klettres-22.04.2/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/klettres/3e8971c6c5f16674958913a94a36b1ea7a00ac46
-cp %{_builddir}/klettres-22.04.2/LICENSES/LGPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/klettres/a4c60b3fefda228cd7439d3565df043192fef137
+cp %{_builddir}/klettres-22.04.3/COPYING.DOC %{buildroot}/usr/share/package-licenses/klettres/1bd373e4851a93027ba70064bd7dbdc6827147e1
+cp %{_builddir}/klettres-22.04.3/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/klettres/3e8971c6c5f16674958913a94a36b1ea7a00ac46
+cp %{_builddir}/klettres-22.04.3/LICENSES/LGPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/klettres/a4c60b3fefda228cd7439d3565df043192fef137
 pushd clr-build
 %make_install
 popd
@@ -1775,6 +1775,36 @@ popd
 /usr/share/klettres/nl/syllab/ad-7.ogg
 /usr/share/klettres/nl/syllab/ad-8.ogg
 /usr/share/klettres/nl/syllab/ad-9.ogg
+/usr/share/klettres/nn/alpha/U0061.opus
+/usr/share/klettres/nn/alpha/U0062.opus
+/usr/share/klettres/nn/alpha/U0063.opus
+/usr/share/klettres/nn/alpha/U0064.opus
+/usr/share/klettres/nn/alpha/U0065.opus
+/usr/share/klettres/nn/alpha/U0066.opus
+/usr/share/klettres/nn/alpha/U0067.opus
+/usr/share/klettres/nn/alpha/U0068.opus
+/usr/share/klettres/nn/alpha/U0069.opus
+/usr/share/klettres/nn/alpha/U006A.opus
+/usr/share/klettres/nn/alpha/U006B.opus
+/usr/share/klettres/nn/alpha/U006C.opus
+/usr/share/klettres/nn/alpha/U006D.opus
+/usr/share/klettres/nn/alpha/U006E.opus
+/usr/share/klettres/nn/alpha/U006F.opus
+/usr/share/klettres/nn/alpha/U0070.opus
+/usr/share/klettres/nn/alpha/U0071.opus
+/usr/share/klettres/nn/alpha/U0072.opus
+/usr/share/klettres/nn/alpha/U0073.opus
+/usr/share/klettres/nn/alpha/U0074.opus
+/usr/share/klettres/nn/alpha/U0075.opus
+/usr/share/klettres/nn/alpha/U0076.opus
+/usr/share/klettres/nn/alpha/U0077.opus
+/usr/share/klettres/nn/alpha/U0078.opus
+/usr/share/klettres/nn/alpha/U0079.opus
+/usr/share/klettres/nn/alpha/U007A.opus
+/usr/share/klettres/nn/alpha/U00E5.opus
+/usr/share/klettres/nn/alpha/U00E6.opus
+/usr/share/klettres/nn/alpha/U00F8.opus
+/usr/share/klettres/nn/sounds.xml
 /usr/share/klettres/pics/aqua/klettres_aqua.svg
 /usr/share/klettres/pics/desert/klettres_desert.svg
 /usr/share/klettres/pics/kids/klettres_kids.svg
