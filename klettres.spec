@@ -6,11 +6,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : klettres
-Version  : 23.08.0
-Release  : 57
-URL      : https://download.kde.org/stable/release-service/23.08.0/src/klettres-23.08.0.tar.xz
-Source0  : https://download.kde.org/stable/release-service/23.08.0/src/klettres-23.08.0.tar.xz
-Source1  : https://download.kde.org/stable/release-service/23.08.0/src/klettres-23.08.0.tar.xz.sig
+Version  : 23.08.1
+Release  : 58
+URL      : https://download.kde.org/stable/release-service/23.08.1/src/klettres-23.08.1.tar.xz
+Source0  : https://download.kde.org/stable/release-service/23.08.1/src/klettres-23.08.1.tar.xz
+Source1  : https://download.kde.org/stable/release-service/23.08.1/src/klettres-23.08.1.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-2.0 LGPL-2.0
@@ -73,15 +73,15 @@ locales components for the klettres package.
 
 
 %prep
-%setup -q -n klettres-23.08.0
-cd %{_builddir}/klettres-23.08.0
+%setup -q -n klettres-23.08.1
+cd %{_builddir}/klettres-23.08.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1693018015
+export SOURCE_DATE_EPOCH=1695081216
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -114,7 +114,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1693018015
+export SOURCE_DATE_EPOCH=1695081216
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/klettres
 cp %{_builddir}/klettres-%{version}/COPYING.DOC %{buildroot}/usr/share/package-licenses/klettres/1bd373e4851a93027ba70064bd7dbdc6827147e1 || :
